@@ -11,11 +11,16 @@ html {
 .page {
   inline-size: 1200px;
   block-size: 100%;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 h1,
@@ -48,4 +53,321 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
+}
+
+.content {
+    display: grid;
+    grid-area: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    width: 1140px;
+    height: 534px;
+    gap: 30px;
+    top: 133px;
+    left: 30px;
+}
+
+.content:nth-child(n) {
+    display: flex;
+}
+
+.result {
+    margin-top: 78px;
+}
+
+.search-form {
+    display: flex;
+    margin-left: 0px;
+    margin-top: 16px;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 54px; 
+}
+
+.search-form__checkbox-list {
+    display: flex;
+    gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+    width: 19px;
+    height: 19px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+}
+
+.visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.content__list-container {
+    height: 298px;
+    width: 399px;
+    gap: 30px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.content__list {
+    width: 399px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content__video-card-thumbnail {
+    width: 194px;
+    height: 103px;
+}
+
+.content__video-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 390px;
+}
+
+.content__video-card-description-container {
+    width: 196px;
+}
+
+.content__details {
+    width: 399px;
+    height: 100%;
+    gap: 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-family: Oswald;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 75px;
+    leading-trim: NONE;
+    line-height: 94%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+
+.title .content__accent {
+    color: #545050;
+
+}
+
+.content__list .content__list-item{
+    margin-bottom: 30px;
+}
+
+.content__list .content__list-item:active {
+    background-color: #545050;
+}
+
+.content__list .content__list-item:not(:active):hover {
+    text-decoration: underline;
+    text-decoration-style: solid;
+}
+
+.result__video-container {
+    width: 711px;
+    height: 386px;
+}
+
+.result__video {
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    object-fit: fill;
+}
+
+.search-form__fieldset-title {
+    font-family: Fira Sans Condensed;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 5px;
+}
+
+.search-form__label {
+    width: fit-content;
+    height: 22px;
+    display: flex;
+    gap: 5px;
+    top: 27px;
+    align-items: center;
+}
+
+.search-form__label:has(:focus-visible) {
+    outline: 1px solid #FFF;
+    outline-offset: 1px;
+}
+
+.search-form__pseudo-checkbox {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+    opacity: 1;
+    background: #FFF;
+}
+
+.search-form__pseudo-checkbox::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+}
+
+.search-form__label span:first-child {
+    display: none;
+}
+
+.search-form__label-text {
+    cursor: pointer;
+}
+
+.search-form__label-text:hover {
+    text-decoration: underline;
+    text-decoration-style: solid;
+}
+
+.search-form__textfield {
+    font-family: Fira Sans Condensed;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    color: #FFF;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    display: block;
+    background-color: transparent;
+    border-top: 1px;
+    border-bottom: 1px;
+    border: 1px solid #FFF;
+    border-left: 0px;
+    border-right: 0px;
+    gap: 10px;
+    width: 225px;
+    height: 27px;
+}
+
+.search-form__textfield:active {
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 1px;
+    border-right: 1px;
+    outline: none;
+}
+
+.search-form__textfield:not(:active):focus-visible {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+.search-form__fieldset {
+    border: none;
+    width: 212px;
+    height: 49px;
+}
+
+.content__video-card-title {
+    font-family: Oswald;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 30px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFF;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content__video-card-description {
+    font-family: Fira Sans Condensed;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 16.2px;
+    letter-spacing: 0%;
+    color: #FFF;
+}
+
+.content__video-card-description-container {
+    flex-grow: inherit;
+    text-decoration: none;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #545050;
+}
+
+.button:not(:active):hover {
+    text-decoration: underline;
+    text-decoration-style: solid;
+}
+
+.button:not(:active):focus-visible {
+    outline: 1px solid #FFF;
+    outline-offset: 1px;
+}
+
+a:any-link {
+    text-decoration: none;
+}
+
+.search-form__submit-button {
+    border: 1px solid #FFF;
+    background-color: transparent;
+    width: 194px;
+    height: 34px;
+    font-family: Fira Sans Condensed;
+    font-weight: 700;
+    font-style: Bold;
+    color: #FFF;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.more-button {
+    border: 1px solid #FFF;
+    background-color: transparent;
+    width: inherit;
+    height: 34px;
+    font-family: Fira Sans Condensed;
+    font-weight: 700;
+    font-style: Bold;
+    color: #FFF;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
 }
